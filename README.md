@@ -1,2 +1,0 @@
-# webpacktest
-测试

@@ -25,6 +25,15 @@ module.exports = {
       }
     ]
   },
+  postcss: [
+    require('autoprefixer')//调用autoprefixer插件
+  ],
+  plugins: [
+     new HtmlWebpackPlugin({
+      template: __dirname + "/app/index.tmpl.html"//new 一个这个插件的实例，并传入相关的参数
+    }),
+    new webpack.HotModuleReplacementPlugin()//热加载插件
+  ],
   devServer: {
     contentBase: "./public",//本地服务器所加载的页面所在的目录
     colors: true,//终端中输出结果为彩色
